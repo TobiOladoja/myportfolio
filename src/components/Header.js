@@ -12,6 +12,10 @@ const Header = () => {
           <span className='heading-primary-main'>Tobi Oladoja</span>
           <span className='heading-primary-sub'>Full-Stack Developer</span>
         </h1>
+
+        <a href='#' className='btn btn-white'>
+          See Projects
+        </a>
       </div>
     </header>
   );
