@@ -104,7 +104,7 @@ code {
 @keyframes moveInRight {
   0% {
     opacity: 0; /* Invisible at beginning */
-    transform: translateX(100px); /* Starts with left side of page */
+    transform: translateX(100px); /* Starts with right side of page */
   }
 
   80% {
@@ -116,6 +116,17 @@ code {
     transform: translateX(0);
   }
 }
+@keyframes moveInBottom {
+  0% {
+    opacity: 0; /* Invisible at beginning */
+    transform: translateY(30px); /* Starts with bottom side of page */
+  }
+
+  100% {
+    opacity: 1; /* Now shows fully no longer invisible*/
+    transform: translateY(0);
+  }
+}
 
 .btn:link,
 .btn:visited {
@@ -125,6 +136,7 @@ code {
   display: inline-block;
   border-radius: 100px;
   transition: all 0.2s;
+  position: relative;
 }
 
 .btn:hover {
@@ -142,6 +154,34 @@ btn:active {
   color: black;
 }
 
+.btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Defines position of element on page, over and under*/
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: white;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.5) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation-name: moveInBottom;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
 /*
 COLORS:
 Light green: #7ed56f

@@ -13,7 +13,7 @@ const Header = () => {
           <span className='heading-primary-sub'>Full-Stack Developer</span>
         </h1>
 
-        <a href='#' className='btn btn-white'>
+        <a href='#' className='btn btn-white btn-animated'>
           See Projects
         </a>
       </div>
