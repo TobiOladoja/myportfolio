@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,7 +15,7 @@ body {
     sans-serif;
   font-size: 16px;
   line-height: 1.7;
-  padding: 30px;
+  padding: 3rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -43,12 +47,12 @@ code {
 
 .logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
-  height: 35px;
+  height: 3.5rem;
 }
 
 .text-box {
@@ -63,14 +67,14 @@ code {
   color: white;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 15px;
+  margin-bottom: 6rem;
 }
 
 .heading-primary-main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 20px;
+  letter-spacing: 2rem;
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -78,9 +82,9 @@ code {
 
 .heading-primary-sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 17px;
+  letter-spacing: 1.7rem;
   animation-name: moveInRight;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -89,11 +93,11 @@ code {
 @keyframes moveInLeft {
   0% {
     opacity: 0; /* Invisible at beginning */
-    transform: translateX(-100px); /* Starts with left side of page */
+    transform: translateX(-10rem); /* Starts with left side of page */
   }
 
   80% {
-    transform: translateX(30px);
+    transform: translateX(3rem);
   }
 
   100% {
@@ -104,11 +108,11 @@ code {
 @keyframes moveInRight {
   0% {
     opacity: 0; /* Invisible at beginning */
-    transform: translateX(100px); /* Starts with right side of page */
+    transform: translateX(10rem); /* Starts with right side of page */
   }
 
   80% {
-    transform: translateX(-30px);
+    transform: translateX(-3rem);
   }
 
   100% {
@@ -119,7 +123,7 @@ code {
 @keyframes moveInBottom {
   0% {
     opacity: 0; /* Invisible at beginning */
-    transform: translateY(30px); /* Starts with bottom side of page */
+    transform: translateY(3rem); /* Starts with bottom side of page */
   }
 
   100% {
@@ -132,21 +136,21 @@ code {
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
@@ -159,7 +163,7 @@ btn:active {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
