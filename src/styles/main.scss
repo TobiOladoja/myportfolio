@@ -1,0 +1,200 @@
+$color-primary-red: #f64f59;
+$color-primary-blue: #c471ed;
+$color-primary-lightblue: #12c2e9;
+$color-white: white;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  padding: 3rem;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.header {
+  height: 65vh;
+  position: relative;
+  background: #12c2e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    $color-primary-red,
+    $color-primary-blue,
+    $color-primary-lightblue
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    $color-primary-red,
+    $color-primary-blue,
+    $color-primary-lightblue
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.7rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0; /* Invisible at beginning */
+    transform: translateX(-10rem); /* Starts with left side of page */
+  }
+
+  80% {
+    transform: translateX(3rem);
+  }
+
+  100% {
+    opacity: 1; /* Now shows fully no longer invisible*/
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0; /* Invisible at beginning */
+    transform: translateX(10rem); /* Starts with right side of page */
+  }
+
+  80% {
+    transform: translateX(-3rem);
+  }
+
+  100% {
+    opacity: 1; /* Now shows fully no longer invisible*/
+    transform: translateX(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0; /* Invisible at beginning */
+    transform: translateY(3rem); /* Starts with bottom side of page */
+  }
+
+  100% {
+    opacity: 1; /* Now shows fully no longer invisible*/
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    &::after {
+      transform: scaleX(1.5) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: black;
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Defines position of element on page, over and under*/
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    animation-name: moveInBottom;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+  }
+}
+
+/*
+COLORS:
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+*/
