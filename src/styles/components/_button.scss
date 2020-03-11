@@ -52,3 +52,25 @@
     animation-fill-mode: backwards;
   }
 }
+
+.btn-text {
+  &:link,
+  &:visited {
+    color: $color-primary-blue;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary-blue;
+    padding: 3px;
+  }
+
+  &:hover {
+    background-color: red;
+    color: white;
+    box-shadow: 0 1rem 2rem red;
+  }
+
+  &:active {
+    box-shadow: 0 1rem 2rem red;
+    transform: translateY(0);
+  }
+}

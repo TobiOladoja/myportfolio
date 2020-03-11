@@ -1,0 +1,21 @@
+.section-about {
+  background: $color-grey-light-1;
+  padding: 20rem;
+  margin-top: -20vh;
+}
+
+.section-features {
+  padding: 20rem 0;
+  background: -webkit-linear-gradient(
+    to right,
+    $color-primary-red,
+    $color-primary-blue,
+    $color-primary-lightblue
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    $color-primary-red,
+    $color-primary-blue,
+    $color-primary-lightblue
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
