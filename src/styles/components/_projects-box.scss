@@ -1,0 +1,70 @@
+.projects-container {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.projects-box {
+  text-align: center;
+  background: white;
+  box-shadow: 0 0.5rem 0.5rem black;
+  border-radius: 5px;
+  margin: 10px;
+  min-width: 100px;
+  height: 350px;
+
+  ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+    li {
+      border-bottom: 1px solid $color-grey-light-1;
+    }
+  }
+  &__picture {
+    color: red;
+    &--1 {
+      width: 100%;
+      height: 50%;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+    &--2 {
+      width: 100%;
+      height: 50%;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+    &--3 {
+      width: 100%;
+      height: 50%;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+    &--4 {
+      width: 100%;
+      height: 50%;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+  }
+}
+.one {
+  flex-grow: 1;
+}
+
+.two {
+  flex-grow: 1;
+}
+
+.three {
+  flex-grow: 1;
+}
+
+.four {
+  flex-grow: 1;
+}
+
+li {
+  list-style: none;
+}

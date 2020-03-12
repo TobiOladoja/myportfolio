@@ -4,7 +4,7 @@ const Features = () => {
   return (
     <section className='section-features'>
       <div className='features-container'>
-        <div className='features-box one'>
+        <div className='features-box fone'>
           <i className='features-box__icon'>Icon</i>
           <h3 className='heading-tertiary'>Front End</h3>
           <ul>
@@ -14,7 +14,7 @@ const Features = () => {
             <li>HTML5</li>
           </ul>
         </div>
-        <div className='features-box two'>
+        <div className='features-box ftwo'>
           <i className='features-box__icon'>Icon</i>
           <h3 className='heading-tertiary'>Server</h3>
           <ul>
@@ -23,7 +23,7 @@ const Features = () => {
             <li>Python</li>
           </ul>
         </div>
-        <div className='features-box three'>
+        <div className='features-box fthree'>
           <i className='features-box__icon'>Icon</i>
           <h3 className='heading-tertiary'>Database</h3>
           <ul>
@@ -32,7 +32,7 @@ const Features = () => {
             <li>sss</li>
           </ul>
         </div>
-        <div className='features-box four'>
+        <div className='features-box ffour'>
           <i className='features-box__icon'>Icon</i>
           <h3 className='heading-tertiary'>Deployment</h3>
           <ul>
